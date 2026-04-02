@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blocked by Flow Breaker</title>
+    <link rel="stylesheet" href="./blocked.css" />
+  </head>
+  <body>
+    <main class="block-screen">
+      <img src="./icon.svg" alt="" class="logo" />
+      <p class="eyebrow">Flow Breaker Shield</p>
+      <h1>This site is locked for your future self.</h1>
+      <p class="copy">
+        You chose a 21-day lock because your goals are more important than a
+        temporary desire. Leave this tab and do one useful action now.
+      </p>
+
+      <div class="actions">
+        <a href="./popup.html" class="primary-link">Open shield dashboard</a>
+        <a href="about:blank" class="secondary-link">Leave site</a>
+      </div>
+
+      <section class="protocol-card">
+        <p class="eyebrow">60-second reset</p>
+        <ol>
+          <li>Stand up and take 10 slow breaths.</li>
+          <li>Drink water or wash your face with cold water.</li>
+          <li>Write down the task you are avoiding.</li>
+          <li>Work on that task for 5 minutes before touching any other tab.</li>
+        </ol>
+      </section>
+
+      <section class="protocol-card">
+        <p class="eyebrow">Bhagavad Gita reminder</p>
+        <blockquote id="gitaQuoteText">
+          Your power is in the action you choose now.
+        </blockquote>
+        <p class="gita-meta" id="gitaVerseText">Bhagavad Gita 2.47</p>
+        <p class="gita-action" id="gitaActionText">
+          Leave this tab and begin one useful task for 5 minutes.
+        </p>
+        <p class="gita-pattern" id="riskPatternText">
+          Flow Breaker is learning which hours are risky for you.
+        </p>
+      </section>
+    </main>
+
+    <script src="./blocked.js"></script>
+  </body>
+</html>

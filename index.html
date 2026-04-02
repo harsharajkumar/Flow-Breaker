@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Flow Breaker helps you protect focus, block destructive urges, and convert big goals into daily action."
+    />
+    <meta name="theme-color" content="#050816" />
+    <title>Flow Breaker</title>
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Flow Breaker home">
+          <img src="./icon.svg" alt="" class="brand-mark" />
+          <div>
+            <p class="eyebrow">Flow Breaker</p>
+            <h1>Goals over urges. Every day.</h1>
+          </div>
+        </a>
+
+        <div class="top-actions">
+          <button type="button" class="ghost-button" id="installAppBtn" hidden>
+            Install app
+          </button>
+          <button type="button" class="danger-button" id="panicButton">
+            Emergency Urge Shield
+          </button>
+        </div>
+      </header>
+
+      <main id="top">
+        <section class="hero-grid">
+          <article class="hero-card">
+            <p class="eyebrow">Mission Control</p>
+            <h2>Your future is stronger than a temporary craving.</h2>
+            <p class="hero-copy">
+              Launch deep focus, trigger the emergency shield instantly, and lock
+              harmful websites for 21 days with no early unlock button.
+            </p>
+
+            <div class="metric-row">
+              <article class="metric-card">
+                <p>Focus today</p>
+                <strong id="focusTodayMetric">0m</strong>
+              </article>
+              <article class="metric-card">
+                <p>Clean streak</p>
+                <strong id="streakMetric">0 days</strong>
+              </article>
+              <article class="metric-card">
+                <p>Active locks</p>
+                <strong id="activeLocksMetric">0</strong>
+              </article>
+              <article class="metric-card">
+                <p>Urges beaten</p>
+                <strong id="urgeWinsMetric">0</strong>
+              </article>
+            </div>
+
+            <div class="hero-actions">
+              <a class="primary-link" href="#focusZone">Start focus block</a>
+              <a class="secondary-link" href="#siteVault">Lock a website</a>
+            </div>
+          </article>
+
+          <article class="shield-card" id="emergencyZone">
+            <div class="shield-header">
+              <div>
+                <p class="eyebrow">Emergency Shield</p>
+                <h2 id="shieldStateTitle">Shield standing by</h2>
+              </div>
+              <span class="shield-badge" id="shieldBadge">READY</span>
+            </div>
+
+            <p id="shieldMessage" class="shield-message">
+              One press locks the default adult-domain list for 21 days and
+              starts a 60-second urge interruption protocol.
+            </p>
+
+            <button type="button" class="panic-cta" id="activateEmergencyBtn">
+              Activate Shield Now
+            </button>
+
+            <div class="rescue-panel">
+              <div class="rescue-topline">
+                <p class="eyebrow">60-second rescue protocol</p>
+                <strong id="rescueCountdown">60s</strong>
+              </div>
+              <ol class="rescue-steps" id="rescueSteps">
+                <li>Stand up immediately and move away from the screen.</li>
+                <li>Inhale 4 seconds, hold 4 seconds, exhale 6 seconds.</li>
+                <li>Say out loud: “My goals are more important than this urge.”</li>
+                <li>Do 15 pushups or a cold-water face rinse.</li>
+                <li>Open today’s top 3 goals and start the first task for 5 minutes.</li>
+              </ol>
+              <button type="button" class="success-button" id="urgeDefeatedBtn">
+                I beat the urge
+              </button>
+            </div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel" id="focusZone">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Focus Mode</p>
+                <h2>Deep work timer</h2>
+              </div>
+              <span class="soft-pill" id="focusModeLabel">50 min flow</span>
+            </div>
+
+            <div class="timer-ring">
+              <p id="focusTimerLabel">50:00</p>
+              <span id="focusTimerSubtext">Ready for one clean session</span>
+            </div>
+
+            <div class="timer-presets" role="group" aria-label="Focus session length">
+              <button type="button" class="preset-btn" data-minutes="25">25m</button>
+              <button type="button" class="preset-btn active" data-minutes="50">
+                50m
+              </button>
+              <button type="button" class="preset-btn" data-minutes="90">90m</button>
+            </div>
+
+            <div class="button-row">
+              <button type="button" class="primary-button" id="startFocusBtn">
+                Start focus
+              </button>
+              <button type="button" class="ghost-button" id="pauseFocusBtn">
+                Pause
+              </button>
+              <button type="button" class="ghost-button" id="resetFocusBtn">
+                Reset
+              </button>
+            </div>
+
+            <form class="mini-form" id="distractionForm">
+              <label for="distractionNote">If your mind wanders, park the distraction here.</label>
+              <div class="inline-control">
+                <input
+                  type="text"
+                  id="distractionNote"
+                  placeholder="Example: reply to group chat after this focus block"
+                  autocomplete="off"
+                />
+                <button type="submit" class="secondary-button">Park it</button>
+              </div>
+            </form>
+
+            <ul class="clean-list" id="distractionList" aria-label="Parked distractions"></ul>
+          </article>
+
+          <article class="panel" id="siteVault">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">21-Day Website Vault</p>
+                <h2>Block what steals your focus</h2>
+              </div>
+              <span class="soft-pill">No early unlock</span>
+            </div>
+
+            <form class="stack-form" id="blockSiteForm">
+              <label for="siteToBlock">Website to lock for the next 21 days</label>
+              <div class="inline-control">
+                <input
+                  type="text"
+                  id="siteToBlock"
+                  placeholder="example.com or https://example.com"
+                  autocomplete="off"
+                  required
+                />
+                <button type="submit" class="primary-button">Lock 21 days</button>
+              </div>
+              <p class="field-help">
+                Emergency Shield also bulk-locks a curated adult-site list for 21 days.
+              </p>
+            </form>
+
+            <div class="vault-banner" id="vaultStatusText">
+              No active emergency lock yet. Add a site or press the shield.
+            </div>
+
+            <div class="block-list-shell">
+              <div class="block-list-head">
+                <p class="eyebrow">Active locked sites</p>
+                <button type="button" class="ghost-button small" id="copyRulesBtn">
+                  Copy block rules
+                </button>
+              </div>
+              <div class="block-list" id="blockList"></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Goal Engine</p>
+                <h2>Make your big goals visible</h2>
+              </div>
+              <span class="soft-pill" id="completedGoalsMetric">0 done</span>
+            </div>
+
+            <form class="stack-form" id="goalForm">
+              <label for="goalTitle">Add a meaningful goal</label>
+              <input
+                type="text"
+                id="goalTitle"
+                placeholder="Example: Study DSA 2 hours daily and ship one project this month"
+                required
+              />
+              <div class="split-fields">
+                <select id="goalHorizon" aria-label="Goal horizon">
+                  <option value="Today">Today</option>
+                  <option value="This Week">This Week</option>
+                  <option value="This Month">This Month</option>
+                  <option value="This Year">This Year</option>
+                  <option value="Life Mission">Life Mission</option>
+                </select>
+                <select id="goalArea" aria-label="Goal area">
+                  <option value="Career">Career</option>
+                  <option value="Study">Study</option>
+                  <option value="Health">Health</option>
+                  <option value="Discipline">Discipline</option>
+                  <option value="Relationships">Relationships</option>
+                </select>
+              </div>
+              <button type="submit" class="primary-button full-width">Add goal</button>
+            </form>
+
+            <div class="subsection">
+              <p class="eyebrow">Today’s top 3 priorities</p>
+              <div class="priority-list" id="priorityList"></div>
+            </div>
+
+            <div class="subsection">
+              <p class="eyebrow">All goals</p>
+              <div class="goal-list" id="goalList"></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">AI Coach Lite</p>
+                <h2>Get a reset plan fast</h2>
+              </div>
+              <span class="soft-pill">Private & local</span>
+            </div>
+
+            <form class="stack-form" id="coachForm">
+              <label for="coachPrompt">What are you feeling or avoiding right now?</label>
+              <textarea
+                id="coachPrompt"
+                rows="4"
+                placeholder="Example: I feel restless and I want to scroll instead of working on my exam prep."
+              ></textarea>
+              <button type="submit" class="primary-button full-width">
+                Generate reset plan
+              </button>
+            </form>
+
+            <div class="coach-output" id="coachOutput">
+              Your coach plan will appear here. The app uses your goals,
+              blocked-site status, and recent trigger patterns to produce a
+              no-excuses next action.
+            </div>
+          </article>
+
+          <article class="panel" id="patternRadar">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Danger Pattern Radar</p>
+                <h2>Learn your weak hours</h2>
+              </div>
+              <span class="soft-pill" id="riskNudgeBadge">Learning</span>
+            </div>
+
+            <div class="risk-banner">
+              <p class="item-title" id="riskInsightTitle">
+                Pattern tracker is warming up
+              </p>
+              <p class="item-meta" id="riskInsightText">
+                Emergency Shield presses and trigger logs will teach Flow
+                Breaker which hours need proactive defense.
+              </p>
+            </div>
+
+            <div class="gita-card">
+              <div class="gita-topline">
+                <p class="eyebrow">Bhagavad Gita motivation</p>
+                <button type="button" class="ghost-button small" id="refreshGitaBtn">
+                  New verse
+                </button>
+              </div>
+              <blockquote id="gitaQuoteText">
+                “You have the right to action alone, not to its fruits.”
+              </blockquote>
+              <p class="item-meta" id="gitaVerseMeta">Bhagavad Gita 2.47</p>
+              <p class="gita-action" id="gitaPracticeText">
+                Do one clean 5-minute action toward today’s first priority.
+              </p>
+            </div>
+
+            <div class="subsection">
+              <p class="eyebrow">Top risk windows</p>
+              <div class="risk-list" id="riskHourList"></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Trigger Journal</p>
+                <h2>Know your weak moments</h2>
+              </div>
+              <span class="soft-pill" id="journalCountMetric">0 logs</span>
+            </div>
+
+            <form class="stack-form" id="journalForm">
+              <input
+                type="text"
+                id="triggerContext"
+                placeholder="Trigger context: late night, loneliness, stress, boredom..."
+                required
+              />
+              <div class="split-fields">
+                <select id="triggerMood" aria-label="Mood">
+                  <option value="Stressed">Stressed</option>
+                  <option value="Lonely">Lonely</option>
+                  <option value="Bored">Bored</option>
+                  <option value="Tired">Tired</option>
+                  <option value="Anxious">Anxious</option>
+                  <option value="Confident">Confident</option>
+                </select>
+                <select id="triggerIntensity" aria-label="Urge intensity">
+                  <option value="3">Intensity 3/10</option>
+                  <option value="5">Intensity 5/10</option>
+                  <option value="7">Intensity 7/10</option>
+                  <option value="9">Intensity 9/10</option>
+                </select>
+              </div>
+              <textarea
+                id="triggerResponse"
+                rows="3"
+                placeholder="What did you do instead? Example: cold shower, walked outside, started timer."
+                required
+              ></textarea>
+              <button type="submit" class="primary-button full-width">
+                Save journal log
+              </button>
+            </form>
+
+            <div class="journal-list" id="journalList"></div>
+          </article>
+
+          <article class="panel">
+            <div class="section-head">
+              <div>
+                <p class="eyebrow">Accountability + Recovery</p>
+                <h2>Stay honest, never ashamed</h2>
+              </div>
+              <span class="soft-pill" id="slipMetric">0 slips logged</span>
+            </div>
+
+            <form class="stack-form" id="accountabilityForm">
+              <input
+                type="text"
+                id="partnerName"
+                placeholder="Accountability partner name"
+                autocomplete="off"
+              />
+              <input
+                type="text"
+                id="partnerContact"
+                placeholder="Contact method or note"
+                autocomplete="off"
+              />
+              <button type="submit" class="secondary-button full-width">
+                Save partner
+              </button>
+            </form>
+
+            <div class="accountability-box" id="accountabilitySummary"></div>
+
+            <div class="button-row">
+              <button type="button" class="ghost-button" id="copyReportBtn">
+                Copy weekly report
+              </button>
+              <button type="button" class="danger-outline-button" id="logSlipBtn">
+                Log a slip without shame
+              </button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

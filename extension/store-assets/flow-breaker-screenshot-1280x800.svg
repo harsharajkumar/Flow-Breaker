@@ -1,0 +1,48 @@
+<svg width="1280" height="800" viewBox="0 0 1280 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="800" fill="#020617"/>
+  <circle cx="196" cy="120" r="320" fill="#7C3AED" opacity="0.22"/>
+  <circle cx="1120" cy="120" r="280" fill="#06B6D4" opacity="0.16"/>
+  <rect x="50" y="50" width="1180" height="700" rx="48" fill="#0F172A" stroke="#26324A" stroke-width="2"/>
+
+  <rect x="90" y="90" width="86" height="86" rx="24" fill="#050816"/>
+  <path d="M133 105L161 116V142C161 161 149 178 133 183C117 178 105 161 105 142V116L133 105Z" fill="url(#g1)"/>
+  <path d="M122 125H145V134H133V141H143V150H133V162H122V125Z" fill="#F8FAFC"/>
+  <path d="M114 125H120V162H114V125Z" fill="#F8FAFC" opacity="0.9"/>
+
+  <text x="200" y="126" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="4">FLOW BREAKER SHIELD</text>
+  <text x="200" y="182" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="900" letter-spacing="-4">Block urges. Protect focus.</text>
+
+  <text x="90" y="296" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500">
+    Emergency Shield locks adult sites for 21 days, learns your risky hours,
+  </text>
+  <text x="90" y="334" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="500">
+    and shows Bhagavad Gita based reminders to bring you back to your goals.
+  </text>
+
+  <rect x="90" y="404" width="336" height="230" rx="34" fill="#1E0B15" stroke="#7F1D1D" stroke-opacity="0.45"/>
+  <text x="126" y="456" fill="#FDBA74" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="3">EMERGENCY SHIELD</text>
+  <text x="126" y="526" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-4">21-day</text>
+  <text x="126" y="578" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="900" letter-spacing="-4">locks</text>
+
+  <rect x="464" y="404" width="336" height="230" rx="34" fill="#140F2A" stroke="#6D28D9" stroke-opacity="0.45"/>
+  <text x="500" y="456" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="3">PATTERN RADAR</text>
+  <text x="500" y="528" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-4">Learns</text>
+  <text x="500" y="582" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-4">weak hours</text>
+
+  <rect x="838" y="404" width="336" height="230" rx="34" fill="#082F49" stroke="#06B6D4" stroke-opacity="0.45"/>
+  <text x="874" y="456" fill="#67E8F9" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="3">GITA MOTIVATION</text>
+  <text x="874" y="528" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-4">Action over</text>
+  <text x="874" y="582" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="-4">impulse</text>
+
+  <rect x="90" y="662" width="1090" height="2" fill="#26324A"/>
+  <text x="90" y="706" fill="#E5E7EB" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="700">
+    No login. No subscription. Local-first private blocking and recovery reminders.
+  </text>
+
+  <defs>
+    <linearGradient id="g1" x1="108" y1="114" x2="158" y2="178" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

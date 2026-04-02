@@ -1,0 +1,31 @@
+<svg width="440" height="280" viewBox="0 0 440 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="440" height="280" fill="#020617"/>
+  <circle cx="64" cy="34" r="130" fill="#7C3AED" opacity="0.22"/>
+  <circle cx="380" cy="34" r="118" fill="#06B6D4" opacity="0.18"/>
+  <rect x="12" y="12" width="416" height="256" rx="28" fill="#0F172A" stroke="#26324A"/>
+
+  <rect x="30" y="34" width="56" height="56" rx="16" fill="#050816"/>
+  <path d="M58 44L77 51V69C77 82 69 93 58 97C47 93 39 82 39 69V51L58 44Z" fill="url(#g2)"/>
+  <path d="M51 58H66V64H58V69H64V75H58V85H51V58Z" fill="#F8FAFC"/>
+  <path d="M46 58H50V85H46V58Z" fill="#F8FAFC" opacity="0.9"/>
+
+  <text x="100" y="56" fill="#C4B5FD" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="800" letter-spacing="2">FLOW BREAKER SHIELD</text>
+  <text x="100" y="96" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900" letter-spacing="-2">Block urges.</text>
+  <text x="30" y="156" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="56" font-weight="900" letter-spacing="-4">21-day lock</text>
+
+  <rect x="30" y="184" width="120" height="56" rx="18" fill="#1E0B15" stroke="#7F1D1D" stroke-opacity="0.45"/>
+  <text x="54" y="218" fill="#FED7AA" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1">Emergency</text>
+
+  <rect x="160" y="184" width="120" height="56" rx="18" fill="#140F2A" stroke="#6D28D9" stroke-opacity="0.45"/>
+  <text x="186" y="218" fill="#DDD6FE" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1">Risk Radar</text>
+
+  <rect x="290" y="184" width="120" height="56" rx="18" fill="#082F49" stroke="#06B6D4" stroke-opacity="0.45"/>
+  <text x="324" y="218" fill="#CFFAFE" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="1">Gita</text>
+
+  <defs>
+    <linearGradient id="g2" x1="41" y1="48" x2="75" y2="94" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+</svg>

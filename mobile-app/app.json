@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Flow Breaker",
+    "slug": "flow-breaker",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flowbreaker.app",
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "Flow Breaker sends local risk-hour reminders based on your learned urge patterns."
+      }
+    },
+    "android": {
+      "package": "com.flowbreaker.app",
+      "permissions": [
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "extra": {
+      "privacy": "All data stays on-device. No login. No subscription."
+    }
+  }
+}
